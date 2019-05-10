@@ -3,11 +3,9 @@ package sample;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import sample.controller.SampleController;
 import sample.controller.factory.DefaultController;
 import sample.controller.factory.Router;
 import sample.structure.App;
-import sample.structure.Applications;
 
 public class Main extends Application {
     private Stage stage;
@@ -23,7 +21,7 @@ public class Main extends Application {
     }
 
     public <T extends DefaultController> void loadScene(String path, Class<T> controller){
-        Router.loadScene(path,controller,stage,scene,this);
+        Router.load(path,controller,stage,scene,this);
     }
 
     public void setTitle(String title){

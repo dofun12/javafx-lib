@@ -4,6 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import sample.Applications;
 import sample.controller.factory.DefaultController;
 
 public class SampleController extends DefaultController {
@@ -14,6 +15,7 @@ public class SampleController extends DefaultController {
     @Override
     public void onInit() {
         System.out.println("Iniciou");
+        getStage().setTitle(Applications.SAMPLE_APP.getName());
         btn.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent event) {
                 loadScene("/another.fxml",AnotherController.class);
