@@ -4,13 +4,14 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.control.Button;
 import org.lemanoman.javafx.Applications;
+import org.lemanoman.javafx.Parameters;
 import org.lemanoman.javafx.controller.factory.DefaultController;
 
 
 public class AnotherController extends DefaultController {
 
     @Override
-    public void onInit() {
+    public void onInit(Parameters parameters) {
         System.out.println("Iniciou");
         getStage().setTitle(Applications.ANOTHER_APP.getName());
         System.out.println("FOi dnv");
